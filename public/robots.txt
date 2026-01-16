@@ -1,0 +1,9 @@
+# Max Gutter Cleaning - Robots.txt
+User-agent: *
+Allow: /
+
+# Disallow admin or private pages if any
+# Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://www.maxgutter.co.uk/sitemap.xml
