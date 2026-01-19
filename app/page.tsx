@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Image from 'next/image';
 import hero from "../public/images/hero.webp"
+import { PHONE_NUMBER_LINK } from './constants';
 
 export default function Home() {
   return (
@@ -10,22 +11,24 @@ export default function Home() {
       <Header />
       <main className="min-h-screen">
         {/* Hero Section (like screenshot) */}
-        <section className="relative h-[60vh] min-h-150">
+        <section className="relative h-[60vh] min-h-140">
           <Image src={hero} alt="Gutter cleaning hero" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl">
-                <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-wide leading-tight">
-                  YOUR LOCAL GUTTER CLEANING & REPAIR SERVICE
+                <h1 className="text-white text-5xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-wide leading-tight">
+                  <span className="block md:hidden text-center ">Get Gutters Cleaned & Fixed Fast</span>
+                  <span className="hidden md:block">YOUR LOCAL GUTTER CLEANING & REPAIR SERVICE</span>
                 </h1>
-                <p className="mt-4 text-blue-100 text-lg md:text-xl font-medium">
-                  A local, Independently owned and operated franchise
+                <p className="mt-4 text-yellow-200 text-lg md:text-xl font-medium">
+                  <span className="block md:hidden text-center">Premium Gutter Services at Unbeatable Price</span>
+                  <span className="hidden md:block">A local, Independently owned and operated franchise</span>
                 </p>
                 {/* Mobile CTA: Call for a quote */}
                 <div className="mt-6 md:hidden flex justify-center">
                   <Link
-                    href="/quote"
+                    href={PHONE_NUMBER_LINK}
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-5 py-3 rounded-md font-semibold shadow"
                     aria-label="Call for a quote"
                   >
